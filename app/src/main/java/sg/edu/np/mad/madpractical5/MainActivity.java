@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
       }
       return null;
     }
-    private myDBHandler dbHandler;
+    private DatabaseHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHandler = new myDBHandler(this, null,null,1);
+        dbHandler = new DatabaseHandler(this, null,null,1);
 
         Intent receivedIntent = getIntent();
         String name = receivedIntent.getStringExtra("Name");
