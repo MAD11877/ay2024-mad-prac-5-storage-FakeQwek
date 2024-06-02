@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity implements UserListener {
-    public static myDBHandler dbHandler;
+    public static DatabaseHandler dbHandler;
 
     public static ArrayList<User> userList;
     @Override
@@ -34,7 +34,7 @@ public class ListActivity extends AppCompatActivity implements UserListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        dbHandler = new myDBHandler(this, null,null,1);
+        dbHandler = new DatabaseHandler(this, null,null,1);
         userList = dbHandler.getUsers();
 
         Random rand = new Random();
